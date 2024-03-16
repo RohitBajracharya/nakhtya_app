@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:nakhtya_app/features/authentication/screens/onboarding/onboarding_screen.dart';
 import 'package:nakhtya_app/utils/constants/colors.dart';
 import 'package:nakhtya_app/utils/constants/image_strings.dart';
+import 'package:nakhtya_app/utils/routes/route.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -25,10 +25,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        Get.to(
-          () => const OnBoardingScreen(),
-          transition: Transition.leftToRight,
-          duration: const Duration(seconds: 2),
+        Get.offAllNamed(
+          TRoutes.getOnBoardingScreen(),
         );
       },
     );
