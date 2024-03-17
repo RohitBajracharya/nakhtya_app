@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nakhtya_app/common/widgets/rounded_button.dart';
 import 'package:nakhtya_app/features/authentication/screens/signup/widgets/text_button.dart';
 import 'package:nakhtya_app/features/authentication/screens/signup/widgets/text_formfield.dart';
 import 'package:nakhtya_app/utils/constants/colors.dart';
 import 'package:nakhtya_app/utils/constants/text_strings.dart';
+import 'package:nakhtya_app/utils/routes/route.dart';
 
 class LoginForm extends StatefulWidget {
+  final bool isCustomer;
+  final bool isCook;
+  final bool isCleaner;
   const LoginForm({
     super.key,
+    this.isCustomer = true,
+    this.isCook = false,
+    this.isCleaner = false,
   });
 
   @override
@@ -34,19 +42,33 @@ class _LoginFormState extends State<LoginForm> {
         const SizedBox(height: 20),
         RoundedButton(
           name: TTexts.login,
-          onTap: () {},
+          onTap: () {
+            if (widget.isCustomer) {
+              Get.toNamed(TRoutes.getCustomerNavigationMenu());
+            }
+          },
           buttonColor: TColors.buttonSecondary,
         ),
         const SizedBox(height: 10),
         Divider(color: Colors.white.withOpacity(0.5), thickness: 2),
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              TTexts.alreadyHaveAccount,
+            const Text(
+              TTexts.dontHaveAccount,
               style: TextStyle(fontFamily: "Poppins", fontSize: 14),
             ),
-            TTextButton(text: TTexts.signUp),
+            TTextButton(
+                text: TTexts.signUp,
+                onTap: () {
+                  if (widget.isCustomer) {
+                    Get.toNamed(TRoutes.getCustomerSignupScreen());
+                  } else if (widget.isCook) {
+                    Get.toNamed(TRoutes.getCookSignupScreen());
+                  } else if (widget.isCleaner) {
+                    Get.toNamed(TRoutes.getCleanerSignupScreen());
+                  }
+                }),
           ],
         )
       ],

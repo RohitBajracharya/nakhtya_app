@@ -12,4 +12,7 @@ class TImages {
 
   //login Screen images
   static const String loginCustomer = "assets/characters/loginCustomer.png";
+
+  //Home Screen images
+  static const String cookuser1 = "assets/images/cook1.png";
 }

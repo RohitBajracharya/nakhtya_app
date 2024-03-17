@@ -10,14 +10,14 @@ import 'package:nakhtya_app/utils/constants/image_strings.dart';
 import 'package:nakhtya_app/utils/constants/text_strings.dart';
 import 'package:nakhtya_app/utils/routes/route.dart';
 
-class OnBoardingScreen extends StatefulWidget {
-  const OnBoardingScreen({super.key});
+class OnBoardingLoginScreen extends StatefulWidget {
+  const OnBoardingLoginScreen({super.key});
 
   @override
-  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
+  State<OnBoardingLoginScreen> createState() => _OnBoardingLoginScreenState();
 }
 
-class _OnBoardingScreenState extends State<OnBoardingScreen> {
+class _OnBoardingLoginScreenState extends State<OnBoardingLoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,67 +46,69 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const TSlideAnimation(
+                  beginOffset: Offset(1, 0),
                   duration: Duration(milliseconds: 1600),
-                  child: AppTitleText(
-                    text: TTexts.appName,
-                  ),
+                  child: AppTitleText(text: TTexts.appName),
                 ),
                 const TSlideAnimation(
+                  beginOffset: Offset(1, 0),
                   duration: Duration(milliseconds: 1500),
-                  child: SubTitleText(
-                    text: TTexts.boardingSubTitle,
-                    fontSize: 20,
-                  ),
+                  child: SubTitleText(text: TTexts.boardingSubTitle),
                 ),
                 const SizedBox(height: 50),
                 Column(
                   children: [
                     TSlideAnimation(
+                      beginOffset: const Offset(1, 0),
                       duration: const Duration(milliseconds: 1400),
                       child: RoundedButton(
-                        onTap: () => Get.toNamed(TRoutes.getCustomerSignupScreen()),
-                        name: TTexts.signUpCustomer,
+                        onTap: () => Get.toNamed(TRoutes.getCustomerLoginScreen()),
+                        name: TTexts.loginCustomer,
                       ),
                     ),
                     const SizedBox(height: 20),
                     TSlideAnimation(
+                      beginOffset: const Offset(1, 0),
                       duration: const Duration(milliseconds: 1300),
                       child: RoundedButton(
-                        onTap: () => Get.toNamed(TRoutes.getCookSignupScreen()),
-                        name: TTexts.signUpCook,
+                        onTap: () => Get.toNamed(TRoutes.getCookLoginScreen()),
+                        name: TTexts.loginCook,
                         buttonColor: TColors.buttonSecondary,
                       ),
                     ),
                     const SizedBox(height: 20),
                     TSlideAnimation(
+                      beginOffset: const Offset(1, 0),
                       duration: const Duration(milliseconds: 1200),
                       child: RoundedButton(
-                        onTap: () => Get.toNamed(TRoutes.getCleanerSignupScreen()),
-                        name: TTexts.signUpCleaner,
+                        onTap: () => Get.toNamed(TRoutes.getCleanerLoginScreen()),
+                        name: TTexts.loginCleaner,
                         buttonColor: TColors.buttonSecondary,
                       ),
                     ),
                     const SizedBox(height: 20),
                     TSlideAnimation(
+                      beginOffset: const Offset(1, 0),
                       duration: const Duration(milliseconds: 1100),
                       child: Divider(color: Colors.white.withOpacity(0.5), thickness: 2),
                     ),
                     TSlideAnimation(
+                      beginOffset: const Offset(1, 0),
                       duration: const Duration(milliseconds: 1000),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Text(
-                            TTexts.alreadyHaveAccount,
+                            TTexts.dontHaveAccount,
                             style: TextStyle(fontFamily: "Poppins", fontSize: 14, color: TColors.textWhite),
                           ),
                           TTextButton(
-                            text: TTexts.login,
-                            onTap: () => Get.toNamed(TRoutes.getOnBoardingLoginScreen()),
+                            text: TTexts.signUp,
+                            onTap: () => Get.toNamed(TRoutes.getOnBoardingSignupScreen()),
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ],

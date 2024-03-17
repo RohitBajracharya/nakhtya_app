@@ -50,7 +50,7 @@ class CookSignupScreen extends StatelessWidget {
                     top: 200,
                     child: Container(
                       padding: const EdgeInsets.all(16.0),
-                      height: TSizes.screenHeight - 380,
+                      height: TSizes.screenHeight - 350,
                       width: TSizes.screenWidth - 100,
                       decoration: BoxDecoration(
                         borderRadius: const BorderRadius.only(
