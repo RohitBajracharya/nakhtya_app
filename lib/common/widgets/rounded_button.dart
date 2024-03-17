@@ -4,16 +4,18 @@ import 'package:nakhtya_app/utils/constants/colors.dart';
 class RoundedButton extends StatelessWidget {
   final String name;
   final Color buttonColor;
+  final VoidCallback onTap;
   const RoundedButton({
     super.key,
     required this.name,
+    required this.onTap,
     this.buttonColor = TColors.buttonPrimary,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         height: 55,
         width: double.infinity,
