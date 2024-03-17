@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nakhtya_app/common/animation/slide_animation.dart';
 import 'package:nakhtya_app/common/widgets/rounded_button.dart';
 import 'package:nakhtya_app/utils/constants/colors.dart';
 import 'package:nakhtya_app/utils/constants/image_strings.dart';
+import 'package:nakhtya_app/utils/constants/text_strings.dart';
+import 'package:nakhtya_app/utils/routes/route.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -42,33 +45,44 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 TSlideAnimation(
                   duration: const Duration(milliseconds: 1600),
                   child: Text(
-                    "NAKHTYA",
+                    TTexts.appName,
                     style: Theme.of(context).textTheme.headlineLarge!.copyWith(fontSize: 60, color: TColors.textWhite),
                   ),
                 ),
                 TSlideAnimation(
                   duration: const Duration(milliseconds: 1600),
                   child: Text(
-                    "Book your Cook and Cleaner",
+                    TTexts.boardingSubTitle,
                     style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: TColors.textWhite),
                   ),
                 ),
                 const SizedBox(height: 50),
-                const Column(
+                Column(
                   children: [
                     TSlideAnimation(
-                      duration: Duration(milliseconds: 1700),
-                      child: RoundedButton(name: "Sign In as Customer"),
+                      duration: const Duration(milliseconds: 1700),
+                      child: RoundedButton(
+                        onTap: () => Get.toNamed(TRoutes.getCustomerSignupScreen()),
+                        name: TTexts.signUpCustomer,
+                      ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     TSlideAnimation(
-                      duration: Duration(milliseconds: 1800),
-                      child: RoundedButton(name: "Sign In as Cook", buttonColor: TColors.buttonSecondary),
+                      duration: const Duration(milliseconds: 1800),
+                      child: RoundedButton(
+                        onTap: () => Get.toNamed(TRoutes.getCookSignupScreen()),
+                        name: TTexts.signUpCook,
+                        buttonColor: TColors.buttonSecondary,
+                      ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     TSlideAnimation(
-                      duration: Duration(milliseconds: 1400),
-                      child: RoundedButton(name: "Sign In as Cleaner", buttonColor: TColors.buttonSecondary),
+                      duration: const Duration(milliseconds: 1400),
+                      child: RoundedButton(
+                        onTap: () => Get.toNamed(TRoutes.getCleanerSignupScreen()),
+                        name: TTexts.signUpCleaner,
+                        buttonColor: TColors.buttonSecondary,
+                      ),
                     ),
                   ],
                 ),

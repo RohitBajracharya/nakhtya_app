@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nakhtya_app/utils/constants/colors.dart';
+import 'package:nakhtya_app/utils/theme/custom_themes/text_field_theme.dart';
 import 'package:nakhtya_app/utils/theme/custom_themes/text_theme.dart';
 
 class TAppTheme {
@@ -9,6 +10,7 @@ class TAppTheme {
     brightness: Brightness.light,
     primaryColor: TColors.primary,
     textTheme: TTextTheme.lightTextTheme,
+    inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
