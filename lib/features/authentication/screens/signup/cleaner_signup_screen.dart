@@ -71,7 +71,7 @@ class CleanerSignupScreen extends StatelessWidget {
                         children: [
                           TitleText(text: TTexts.cleanerSignupTitle),
                           SizedBox(height: 20),
-                          SignUpForm(isCustomer: false),
+                          SignUpForm(isCustomer: false, isCleaner: true),
                         ],
                       ),
                     ),

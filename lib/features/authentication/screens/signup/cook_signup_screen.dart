@@ -71,7 +71,7 @@ class CookSignupScreen extends StatelessWidget {
                         children: [
                           TitleText(text: TTexts.cookSignupTitle),
                           SizedBox(height: 20),
-                          SignUpForm(isCustomer: false),
+                          SignUpForm(isCustomer: false, isCook: true),
                         ],
                       ),
                     ),

@@ -17,7 +17,7 @@ class TTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: onTap,
       child: Text(
         text,
         style: TextStyle(

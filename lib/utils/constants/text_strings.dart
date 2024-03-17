@@ -23,4 +23,10 @@ class TTexts {
 
   //cook signup screen
   static const String cleanerSignupTitle = "Become a Cleaner";
+
+  //login screen
+  static const String dontHaveAccount = "Don't Have an Account?";
+  static const String loginCustomer = "Hello Customer";
+  static const String loginCook = "Hello Cook";
+  static const String loginCleaner = "Hello Cleaner";
 }

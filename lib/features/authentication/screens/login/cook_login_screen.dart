@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:nakhtya_app/common/widgets/title_text.dart';
+import 'package:nakhtya_app/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:nakhtya_app/features/authentication/screens/signup/widgets/character_position.dart';
-import 'package:nakhtya_app/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:nakhtya_app/utils/constants/image_strings.dart';
 import 'package:nakhtya_app/utils/constants/sizes.dart';
 import 'package:nakhtya_app/utils/constants/text_strings.dart';
 
-class CustomerSignupScreen extends StatelessWidget {
-  const CustomerSignupScreen({super.key});
+class CookLoginScreen extends StatelessWidget {
+  const CookLoginScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class CustomerSignupScreen extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             child: Container(
-              height: TSizes.screenHeight - 190,
+              height: TSizes.screenHeight - 280,
               width: TSizes.screenWidth - 100,
               decoration: BoxDecoration(
                 border: Border.all(
@@ -39,10 +41,9 @@ class CustomerSignupScreen extends StatelessWidget {
               child: Stack(
                 children: [
                   // customer png 1st
-                  const CharacterPosition(image: TImages.customer1, leftPosition: 140, topPositon: 20),
+                  const CharacterPosition(image: TImages.cook2, leftPosition: 70, topPositon: 20),
 
                   // customer png 2nd
-                  const CharacterPosition(image: TImages.customer2, rightPosition: 130, topPositon: 20),
                   //form container
                   Positioned(
                     top: 250,
@@ -67,9 +68,9 @@ class CustomerSignupScreen extends StatelessWidget {
                       child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          TitleText(text: TTexts.customerSignupTitle),
+                          TitleText(text: TTexts.loginCook),
                           SizedBox(height: 20),
-                          SignUpForm(isCustomer: true),
+                          LoginForm(),
                         ],
                       ),
                     ),

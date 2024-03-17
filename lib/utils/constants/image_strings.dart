@@ -9,4 +9,7 @@ class TImages {
   static const String cook2 = "assets/characters/cook-2.png";
   static const String cleaner1 = "assets/characters/cleaner-1.png";
   static const String cleaner2 = "assets/characters/cleaner-2.png";
+
+  //login Screen images
+  static const String loginCustomer = "assets/characters/loginCustomer.png";
 }
