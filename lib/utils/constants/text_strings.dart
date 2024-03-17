@@ -5,6 +5,9 @@ class TTexts {
   static const String signUpCustomer = "Sign Up as Customer";
   static const String signUpCook = "Sign Up as Cook";
   static const String signUpCleaner = "Sign Up as Cleaner";
+  static const String loginCustomer = "Login as Customer";
+  static const String loginCook = "Login as Cook";
+  static const String loginCleaner = "Login as Cleaner";
 
   //signup screen
   static const String password = "Password";
@@ -26,7 +29,14 @@ class TTexts {
 
   //login screen
   static const String dontHaveAccount = "Don't Have an Account?";
-  static const String loginCustomer = "Hello Customer";
-  static const String loginCook = "Hello Cook";
-  static const String loginCleaner = "Hello Cleaner";
+  static const String welcomeCustomer = "Hello Customer";
+  static const String welcomeCook = "Hello Cook";
+  static const String welcomeCleaner = "Hello Cleaner";
+
+  //customer home screen
+  static const String home = "Home";
+  static const String availableCooks = "Available Cooks";
+  static const String viewAllCooks = "View All Cooks";
+  static const String availableCleaners = "Available Cleaners";
+  static const String viewAllCleaners = "View All Cleaners";
 }

@@ -66,9 +66,12 @@ class CleanerLoginScreen extends StatelessWidget {
                       child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          TitleText(text: TTexts.loginCleaner),
+                          TitleText(text: TTexts.welcomeCleaner),
                           SizedBox(height: 20),
-                          LoginForm(),
+                          LoginForm(
+                            isCustomer: false,
+                            isCleaner: true,
+                          ),
                         ],
                       ),
                     ),

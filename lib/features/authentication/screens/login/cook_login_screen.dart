@@ -68,9 +68,9 @@ class CookLoginScreen extends StatelessWidget {
                       child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          TitleText(text: TTexts.loginCook),
+                          TitleText(text: TTexts.welcomeCook),
                           SizedBox(height: 20),
-                          LoginForm(),
+                          LoginForm(isCustomer: false, isCook: true),
                         ],
                       ),
                     ),

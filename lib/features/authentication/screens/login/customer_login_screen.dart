@@ -68,7 +68,7 @@ class CustomerLoginScreen extends StatelessWidget {
                       child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          TitleText(text: TTexts.loginCustomer),
+                          TitleText(text: TTexts.welcomeCustomer),
                           SizedBox(height: 20),
                           LoginForm(),
                         ],

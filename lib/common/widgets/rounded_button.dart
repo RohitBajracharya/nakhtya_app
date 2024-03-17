@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nakhtya_app/common/widgets/normal_title_text.dart';
 import 'package:nakhtya_app/utils/constants/colors.dart';
 
 class RoundedButton extends StatelessWidget {
@@ -24,9 +25,8 @@ class RoundedButton extends StatelessWidget {
           color: buttonColor,
         ),
         child: Center(
-          child: Text(
-            name,
-            style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: TColors.textWhite),
+          child: NormalTitleText(
+            text: name,
           ),
         ),
       ),

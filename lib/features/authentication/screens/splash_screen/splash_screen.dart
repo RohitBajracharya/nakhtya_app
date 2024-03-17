@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       const Duration(seconds: 3),
       () {
         Get.offAllNamed(
-          TRoutes.getOnBoardingScreen(),
+          TRoutes.getOnBoardingSignupScreen(),
         );
       },
     );
