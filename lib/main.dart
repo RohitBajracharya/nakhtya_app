@@ -18,8 +18,9 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      initialRoute: TRoutes.getInitial(),
+      initialRoute: TRoutes.getCustomerLoginScreen(),
       getPages: TRoutes.routes,
+      transitionDuration: const Duration(seconds: 1),
     );
   }
 }

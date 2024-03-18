@@ -5,11 +5,13 @@ class NormalText extends StatelessWidget {
   final String text;
   final Color color;
   final FontWeight fontWeight;
+  final double size;
   const NormalText({
     Key? key,
     required this.text,
     this.color = TColors.textWhite,
     this.fontWeight = FontWeight.normal,
+    this.size = 18,
   }) : super(key: key);
 
   @override
@@ -20,6 +22,7 @@ class NormalText extends StatelessWidget {
         fontFamily: "Poppins",
         color: color,
         fontWeight: fontWeight,
+        fontSize: size,
       ),
     );
   }

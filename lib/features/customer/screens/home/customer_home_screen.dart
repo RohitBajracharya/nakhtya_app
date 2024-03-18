@@ -9,22 +9,25 @@ class CustomerHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: TColors.primary,
-        centerTitle: true,
-        title: const NormalText(text: TTexts.home),
-      ),
-      body: const SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              CategorySection(categoryTitle: TTexts.availableCooks, categorySubtitle: TTexts.viewAllCooks),
-              SizedBox(height: 10),
-              CategorySection(categoryTitle: TTexts.availableCleaners, categorySubtitle: TTexts.viewAllCleaners),
-            ],
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: TColors.primary,
+          centerTitle: true,
+          title: const NormalText(text: TTexts.home),
+        ),
+        body: const SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                CategorySection(categoryTitle: TTexts.availableCooks, categorySubtitle: TTexts.viewAllCooks),
+                SizedBox(height: 10),
+                CategorySection(categoryTitle: TTexts.availableCleaners, categorySubtitle: TTexts.viewAllCleaners),
+              ],
+            ),
           ),
         ),
       ),

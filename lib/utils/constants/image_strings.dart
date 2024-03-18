@@ -15,4 +15,8 @@ class TImages {
 
   //Home Screen images
   static const String cookuser1 = "assets/images/cook1.png";
+  static const String cookuser2 = "assets/images/cook2.png";
+  static const String cookuser3 = "assets/images/cook3.png";
+  static const String cookuser4 = "assets/images/cook4.png";
+  static const String cookuser5 = "assets/images/cook5.png";
 }

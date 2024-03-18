@@ -39,4 +39,11 @@ class TTexts {
   static const String viewAllCooks = "View All Cooks";
   static const String availableCleaners = "Available Cleaners";
   static const String viewAllCleaners = "View All Cleaners";
+
+  //customer home screen, cook detail
+  static const String speciality = "Speciality";
+  static const String negotiatePrice = "Negotiate Price";
+  static const String bookCook = "Book Cook";
+  static const String basePrice = "Base Price";
+  static const String lastOnline = "Last Online";
 }

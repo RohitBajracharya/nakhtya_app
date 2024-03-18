@@ -5,9 +5,11 @@ import 'package:nakhtya_app/utils/constants/colors.dart';
 
 class RatingWithStar extends StatelessWidget {
   final String rating;
+  final double size;
   const RatingWithStar({
     super.key,
     required this.rating,
+    this.size = 14,
   });
 
   @override
@@ -18,11 +20,12 @@ class RatingWithStar extends StatelessWidget {
           text: rating,
           color: TColors.primary,
           fontWeight: FontWeight.w600,
+          size: size,
         ),
         const SizedBox(width: 5),
-        const Icon(
+        Icon(
           Iconsax.star4,
-          size: 14,
+          size: size,
           color: TColors.primary,
         ),
       ],

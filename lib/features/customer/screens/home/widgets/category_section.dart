@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:nakhtya_app/features/customer/model/cook.dart';
 import 'package:nakhtya_app/features/customer/screens/home/widgets/category_text.dart';
 import 'package:nakhtya_app/features/customer/screens/home/widgets/user_card.dart';
 import 'package:nakhtya_app/features/customer/screens/home/widgets/view_all_button.dart';
+import 'package:nakhtya_app/utils/routes/route.dart';
 
 class CategorySection extends StatelessWidget {
   final String categoryTitle;
@@ -36,7 +39,16 @@ class CategorySection extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: 5,
             itemBuilder: (context, index) {
-              return const UserCard();
+              final cook = CookList().cooks[index];
+              return UserCard(
+                cook: cook,
+                onTap: () {
+                  Get.toNamed(
+                    TRoutes.getCookDetail(),
+                    arguments: cook,
+                  );
+                },
+              );
             },
           ),
         )

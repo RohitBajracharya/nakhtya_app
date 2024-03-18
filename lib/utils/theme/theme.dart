@@ -9,6 +9,7 @@ class TAppTheme {
     brightness: Brightness.light,
     primaryColor: TColors.primary,
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
+    colorScheme: const ColorScheme.light(primary: TColors.primary),
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,

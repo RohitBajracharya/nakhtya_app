@@ -9,6 +9,7 @@ import 'package:nakhtya_app/features/authentication/screens/signup/cook_signup_s
 import 'package:nakhtya_app/features/authentication/screens/signup/customer_signup_screen.dart';
 import 'package:nakhtya_app/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:nakhtya_app/features/customer/screens/customer_navigation_menu.dart';
+import 'package:nakhtya_app/features/customer/screens/home/subscreens/cook_detail_screen.dart';
 
 class TRoutes {
   TRoutes._();
@@ -23,6 +24,7 @@ class TRoutes {
   static const String _cookLoginScreen = "/cook-login";
   static const String _cleanerLoginScreen = "/cleaner-login";
   static const String _customerNavigationMenu = "/customer-home";
+  static const String _cookDetailScreen = "/cook-detail";
 
   static String getInitial() => _initial;
   static String getOnBoardingSignupScreen() => _onBoardingSignupScreen;
@@ -34,6 +36,7 @@ class TRoutes {
   static String getCookLoginScreen() => _cookLoginScreen;
   static String getCleanerLoginScreen() => _cleanerLoginScreen;
   static String getCustomerNavigationMenu() => _customerNavigationMenu;
+  static String getCookDetail() => _cookDetailScreen;
 
   static List<GetPage> routes = [
     //splash screen
@@ -44,14 +47,12 @@ class TRoutes {
       name: _onBoardingSignupScreen,
       page: () => const OnBoardingScreen(),
       transition: Transition.leftToRight,
-      transitionDuration: const Duration(microseconds: 10),
     ),
     //onboarding screen
     GetPage(
       name: _onBoardingLoginScreen,
       page: () => const OnBoardingLoginScreen(),
       transition: Transition.rightToLeft,
-      transitionDuration: const Duration(microseconds: 10),
     ),
 
     //customer signup screen
@@ -59,7 +60,6 @@ class TRoutes {
       name: _customerSignUpScreen,
       page: () => const CustomerSignupScreen(),
       transition: Transition.zoom,
-      transitionDuration: const Duration(seconds: 1),
     ),
 
     //cook signup screen
@@ -67,7 +67,6 @@ class TRoutes {
       name: _cookSignUpScreen,
       page: () => const CookSignupScreen(),
       transition: Transition.zoom,
-      transitionDuration: const Duration(seconds: 1),
     ),
 
     //cleaner signup screen
@@ -75,7 +74,6 @@ class TRoutes {
       name: _cleanerSignUpScreen,
       page: () => const CleanerSignupScreen(),
       transition: Transition.zoom,
-      transitionDuration: const Duration(seconds: 1),
     ),
 
     //customer login screen
@@ -83,21 +81,18 @@ class TRoutes {
       name: _customerLoginScreen,
       page: () => const CustomerLoginScreen(),
       transition: Transition.zoom,
-      transitionDuration: const Duration(seconds: 1),
     ),
     //cook login screen
     GetPage(
       name: _cookLoginScreen,
       page: () => const CookLoginScreen(),
       transition: Transition.zoom,
-      transitionDuration: const Duration(seconds: 1),
     ),
     //cleaner login screen
     GetPage(
       name: _cleanerLoginScreen,
       page: () => const CleanerLoginScreen(),
       transition: Transition.zoom,
-      transitionDuration: const Duration(seconds: 1),
     ),
 
     //customer navigation screen
@@ -105,7 +100,13 @@ class TRoutes {
       name: _customerNavigationMenu,
       page: () => const CustomerNavigationMenu(),
       transition: Transition.leftToRightWithFade,
-      transitionDuration: const Duration(seconds: 1),
+    ),
+
+    //cook detail screen
+    GetPage(
+      name: _cookDetailScreen,
+      page: () => const CookDetailScreen(),
+      // transition: Transition.leftToRightWithFade,
     ),
   ];
 }

@@ -16,6 +16,8 @@ class NormalTitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
       style: TextStyle(
         color: color,
         fontSize: fontSize,

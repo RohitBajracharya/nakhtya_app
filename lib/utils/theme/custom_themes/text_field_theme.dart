@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nakhtya_app/utils/constants/colors.dart';
 
 class TTextFormFieldTheme {
   TTextFormFieldTheme._();
@@ -6,12 +7,12 @@ class TTextFormFieldTheme {
   //light textform field theme
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 3,
-    prefixIconColor: Colors.white,
-    suffixIconColor: Colors.white,
+    prefixIconColor: TColors.secondary,
+    suffixIconColor: TColors.secondary,
     labelStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.white),
     hintStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.white),
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
-    floatingLabelStyle: const TextStyle().copyWith(color: Colors.white.withOpacity(0.8)),
+    floatingLabelStyle: const TextStyle().copyWith(color: TColors.secondary),
     border: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
       borderSide: const BorderSide(width: 4, color: Colors.pink),
