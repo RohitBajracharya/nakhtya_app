@@ -9,7 +9,7 @@ import 'package:nakhtya_app/features/authentication/screens/signup/cook_signup_s
 import 'package:nakhtya_app/features/authentication/screens/signup/customer_signup_screen.dart';
 import 'package:nakhtya_app/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:nakhtya_app/features/customer/screens/customer_navigation_menu.dart';
-import 'package:nakhtya_app/features/customer/screens/home/subscreens/cook_detail_screen.dart';
+import 'package:nakhtya_app/features/customer/screens/home/subscreens/detail_screen.dart';
 
 class TRoutes {
   TRoutes._();
@@ -24,7 +24,7 @@ class TRoutes {
   static const String _cookLoginScreen = "/cook-login";
   static const String _cleanerLoginScreen = "/cleaner-login";
   static const String _customerNavigationMenu = "/customer-home";
-  static const String _cookDetailScreen = "/cook-detail";
+  static const String _detailScreen = "/user-detail";
 
   static String getInitial() => _initial;
   static String getOnBoardingSignupScreen() => _onBoardingSignupScreen;
@@ -36,7 +36,7 @@ class TRoutes {
   static String getCookLoginScreen() => _cookLoginScreen;
   static String getCleanerLoginScreen() => _cleanerLoginScreen;
   static String getCustomerNavigationMenu() => _customerNavigationMenu;
-  static String getCookDetail() => _cookDetailScreen;
+  static String getCookDetail() => _detailScreen;
 
   static List<GetPage> routes = [
     //splash screen
@@ -102,10 +102,10 @@ class TRoutes {
       transition: Transition.leftToRightWithFade,
     ),
 
-    //cook detail screen
+    //detail screen
     GetPage(
-      name: _cookDetailScreen,
-      page: () => const CookDetailScreen(),
+      name: _detailScreen,
+      page: () => const DetailScreen(),
       // transition: Transition.leftToRightWithFade,
     ),
   ];

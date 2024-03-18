@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nakhtya_app/common/widgets/normal_text.dart';
+import 'package:nakhtya_app/features/customer/model/cleaner.dart';
+import 'package:nakhtya_app/features/customer/model/cook.dart';
 import 'package:nakhtya_app/features/customer/screens/home/widgets/category_section.dart';
 import 'package:nakhtya_app/utils/constants/colors.dart';
 import 'package:nakhtya_app/utils/constants/text_strings.dart';
@@ -18,14 +20,22 @@ class CustomerHomeScreen extends StatelessWidget {
           centerTitle: true,
           title: const NormalText(text: TTexts.home),
         ),
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                CategorySection(categoryTitle: TTexts.availableCooks, categorySubtitle: TTexts.viewAllCooks),
-                SizedBox(height: 10),
-                CategorySection(categoryTitle: TTexts.availableCleaners, categorySubtitle: TTexts.viewAllCleaners),
+                CategorySection(
+                  categoryTitle: TTexts.availableCooks,
+                  categorySubtitle: TTexts.viewAllCooks,
+                  user: CookList.cooks,
+                ),
+                const SizedBox(height: 10),
+                CategorySection(
+                  categoryTitle: TTexts.availableCleaners,
+                  categorySubtitle: TTexts.viewAllCleaners,
+                  user: CleanerList.cleaners,
+                ),
               ],
             ),
           ),

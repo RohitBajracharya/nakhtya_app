@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:nakhtya_app/common/widgets/normal_text.dart';
 import 'package:nakhtya_app/common/widgets/normal_title_text.dart';
 import 'package:nakhtya_app/common/widgets/small_text.dart';
+import 'package:nakhtya_app/features/customer/model/cleaner.dart';
 import 'package:nakhtya_app/features/customer/model/cook.dart';
 import 'package:nakhtya_app/features/customer/screens/home/widgets/rating_text.dart';
 import 'package:nakhtya_app/utils/constants/colors.dart';
 
-class UserCard extends StatelessWidget {
-  final Cook cook;
+class UserCard<T> extends StatelessWidget {
+  final T user;
   final VoidCallback onTap;
   const UserCard({
     super.key,
     required this.onTap,
-    required this.cook,
+    required this.user,
   });
 
   @override
@@ -44,7 +45,7 @@ class UserCard extends StatelessWidget {
                   height: 150,
                   width: 200,
                   child: Image.asset(
-                    cook.image,
+                    (user is Cook) ? (user as Cook).image : (user as Cleaner).image,
                   ),
                 ),
                 //bottom part
@@ -65,19 +66,19 @@ class UserCard extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             //name
-                            Expanded(child: NormalTitleText(text: cook.name, color: TColors.textPrimary)),
+                            Expanded(child: NormalTitleText(text: (user is Cook) ? (user as Cook).name : (user as Cleaner).name, color: TColors.textPrimary)),
                             //rating with star
-                            RatingWithStar(rating: cook.rating),
+                            RatingWithStar(rating: (user is Cook) ? (user as Cook).rating : (user as Cleaner).rating),
                           ],
                         ),
                         const SizedBox(height: 5),
                         //price
-                        NormalText(text: "${cook.price}", color: TColors.textPrimary),
+                        NormalText(text: "${(user is Cook) ? (user as Cook).price : (user as Cleaner).price}", color: TColors.textPrimary),
                         const SizedBox(height: 5),
                         Row(
                           children: [
                             const SmallText(text: "Last Online: "),
-                            SmallText(text: cook.onlineHour),
+                            SmallText(text: (user is Cook) ? (user as Cook).onlineHour : (user as Cleaner).onlineHour),
                           ],
                         ),
                       ],

@@ -22,7 +22,7 @@ class Cook {
 }
 
 class CookList {
-  List<Cook> cooks = [
+  static List<Cook> cooks = [
     Cook(
       id: 1,
       name: "John Doe",
